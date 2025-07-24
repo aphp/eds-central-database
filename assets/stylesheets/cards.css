@@ -1,0 +1,251 @@
+.md-typeset .card-set {
+    grid-gap: .4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    margin: 1em 0
+}
+
+.md-typeset .card-set > .card-content, .md-typeset .card-set > .card-content, .md-typeset .grid > .card {
+    border: .05rem solid var(--md-default-fg-color--lightest);
+    border-radius: .9rem;
+    display: block;
+    margin: 0;
+    padding: .8rem;
+    transition: border .25s, box-shadow .25s;
+    container-name: card;
+    container-type: inline-size;
+}
+
+.md-typeset .card-set > .card-content:focus-within, .md-typeset .card-set > .card-content:hover, .md-typeset .card-set > .card-content:focus-within, .md-typeset .card-set > .card-content:hover, .md-typeset .grid > .card:focus-within, .md-typeset .grid > .card:hover {
+    border-color: #0000;
+    box-shadow: var(--md-shadow-z3)
+}
+
+.md-typeset .card-set > .card-content > hr, .md-typeset .card-set > .card-content > hr, .md-typeset .grid > .card > hr {
+    margin-bottom: .8em;
+    margin-top: .8em;
+    border-top: .1em solid white;
+}
+
+.md-typeset .card-set > .card-content > :first-child, .md-typeset .card-set > .card-content > :first-child, .md-typeset .grid > .card > :first-child {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.md-typeset .card-set > .card-content > :last-child, .md-typeset .card-set > .card-content > :last-child, .md-typeset .grid > .card > :last-child {
+    margin-bottom: 0
+}
+
+.md-typeset .card-set > *, .md-typeset .card-set > .admonition, .md-typeset .card-set > .highlight > *, .md-typeset .card-set > .highlighttable, .md-typeset .card-set > .md-typeset details, .md-typeset .card-set > details, .md-typeset .card-set > pre {
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.md-typeset .card-set > .highlight > pre:only-child, .md-typeset .card-set > .highlight > pre > code, .md-typeset .card-set > .highlighttable, .md-typeset .card-set > .highlighttable > tbody, .md-typeset .card-set > .highlighttable > tbody > tr, .md-typeset .card-set > .highlighttable > tbody > tr > .code, .md-typeset .card-set > .highlighttable > tbody > tr > .code > .highlight, .md-typeset .card-set > .highlighttable > tbody > tr > .code > .highlight > pre, .md-typeset .card-set > .highlighttable > tbody > tr > .code > .highlight > pre > code {
+    height: 100%
+}
+
+/* For the domains grid */
+.md-typeset .card-set > .in-progress {
+    color: #505050;
+}
+
+.md-typeset .card-set > a {
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* Patient */
+.md-typeset .card-set > .patient {
+    background: linear-gradient(135deg, #004778, #5571ac);
+}
+
+.md-typeset .card-set > .patient:hover {
+    background: white;
+    color: #004778;
+    box-shadow: 0 0 0 2px #004778, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .patient:hover hr {
+    background-color: #004778;
+}
+
+/* Biology */
+.md-typeset .card-set > .biology {
+    background: linear-gradient(135deg, #3D2721, #7A5B52);
+}
+
+.md-typeset .card-set > .biology:hover {
+    background: white;
+    color: #3D2721;
+    box-shadow: 0 0 0 2px #3D2721, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .biology:hover hr {
+    background-color: #6E4B63;
+}
+
+/* Administration */
+.md-typeset .card-set > .administration {
+    background: linear-gradient(135deg, #4B2A91, #7C68A9);
+}
+
+.md-typeset .card-set > .administration:hover {
+    background: white;
+    color: #4B2A91;
+    box-shadow: 0 0 0 2px #4B2A91, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .administration:hover hr {
+    background-color: #4B2A91;
+}
+
+/* Imaging */
+.md-typeset .card-set > .imaging {
+    background: linear-gradient(135deg, #C66300, #D89038);
+}
+
+.md-typeset .card-set > .imaging:hover {
+    background: white;
+    color: #C66300;
+    box-shadow: 0 0 0 2px #C66300, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .imaging:hover hr {
+    background-color: #C66300;
+}
+
+/* Drug */
+.md-typeset .card-set > .drug {
+    background: linear-gradient(135deg, #991442, #D47392);
+}
+
+.md-typeset .card-set > .drug:hover {
+    background: white;
+    color: #991442;
+    box-shadow: 0 0 0 2px #991442, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .drug:hover hr {
+    background-color: #991442;
+}
+
+/* Maternity */
+.md-typeset .card-set > .maternity {
+    background: linear-gradient(135deg, #2B6C2F, #6CA96A);
+}
+
+.md-typeset .card-set > .maternity:hover {
+    background: white;
+    color: #2B6C2F;
+    box-shadow: 0 0 0 2px #2B6C2F, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .maternity:hover hr {
+    background-color: #2B6C2F;
+}
+
+/* Document */
+.md-typeset .card-set > .document {
+    background: linear-gradient(135deg, #026899, #1C9CB0);
+}
+
+.md-typeset .card-set > .document:hover {
+    background: white;
+    color: #026899;
+    box-shadow: 0 0 0 2px #026899, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .document:hover hr {
+    background-color: #026899;
+}
+
+/* PMSI */
+.md-typeset .card-set > .pmsi {
+    background: linear-gradient(135deg, #722093, #B270C2);
+}
+
+.md-typeset .card-set > .pmsi:hover {
+    background: white;
+    color: #722093;
+    box-shadow: 0 0 0 2px #722093, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .pmsi:hover hr {
+    background-color: #722093;
+}
+
+/* Caresite */
+.md-typeset .card-set > .caresite {
+    background: linear-gradient(135deg, #B62A2A, #D04C48);
+}
+
+.md-typeset .card-set > .caresite:hover {
+    background: white;
+    color: #B62A2A;
+    box-shadow: 0 0 0 2px #B62A2A, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .caresite:hover hr {
+    background-color: #B62A2A;
+}
+
+/* Physio */
+.md-typeset .card-set > .physio {
+    background: linear-gradient(135deg, #00574D, #1F877F);
+}
+
+.md-typeset .card-set > .physio:hover {
+    background: white;
+    color: #00574D;
+    box-shadow: 0 0 0 2px #00574D, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .physio:hover hr {
+    background-color: #00574D;
+}
+
+/* Pediatrics */
+.md-typeset .card-set > .pediatrics {
+    background: linear-gradient(135deg, #2E3C43, #7A8F98);
+}
+
+.md-typeset .card-set > .pediatrics:hover {
+    background: white;
+    color: #2E3C43;
+    box-shadow: 0 0 0 2px #2E3C43, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .card-set > .pediatrics:hover hr {
+    background-color: #2E3C43;
+}
+
+.card-content p:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+@container card (max-width: 420px) {
+    .card-content p:first-child {
+        font-size: 0.7rem;
+    }
+}
+
+@container card (max-width: 380px) {
+    .card-content p:first-child {
+        font-size: 0.655rem;
+    }
+}
+
+.card-content p strong {
+    flex: 1;
+    white-space: nowrap;
+}
+
+.md-typeset .card-set .card-content .twemoji {
+    --md-icon-size: 2.5em;
+    margin-right: 0.6em;
+    flex: 0 0 50px;
+}
