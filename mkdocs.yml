@@ -1,0 +1,118 @@
+site_name: EDS Central Database - Documentation
+site_url: https://aphp.github.io/eds-central-database/
+repo_url: https://github.com/aphp/eds-central-database
+repo_name: EDS Central Database
+site_description: EDS Central Database - Documentation
+site_author: APHP - I&D - Data Engineering
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  custom_dir: docs_includes/material/overrides
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: assets/eds-header-logo.png
+  favicon: assets/eds-header-logo.png
+  language: fr
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    annotation: material/plus-circle
+  features:
+    - announce.dismiss
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - navigation.tabs.sticky
+    - content.tabs.link
+    - content.tooltips
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - toc.follow
+
+watch:
+  - docs_includes
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+  - literate-nav:
+      nav_file: SUMMARY.md
+      implicit_index: true
+  - git-revision-date-localized:
+      type: timeago
+      exclude:
+        - changelog/*
+        - terminology/*
+        - data-models/*
+  - glightbox
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - abbr
+  - footnotes
+  - md_in_html
+  - attr_list
+  - tables
+  - admonition
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append:
+        - docs_includes/glossary.md
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - docs_includes/material/overrides/.icons
+  - pymdownx.tabbed:
+      alternate_style: true
+  - docs.scripts.cards
+
+exclude_docs: |
+  SUMMARY.md
+
+extra_css:
+  - assets/stylesheets/style.css
+  - assets/stylesheets/cards.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - assets/javascripts/tablesort.js
+
+extra:
+  locale: fr
+  lang: fr
+
+copyright: Copyright &copy; 2025 - AP-HP - Innovation & Données - Entrepôt de Données de Santé

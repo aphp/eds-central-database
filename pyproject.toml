@@ -1,0 +1,21 @@
+[project]
+name = "eds-central-database"
+version = "2.12.0"
+description = "Data catalog and processing pipelines to build a centralized FHIR-based database in the AP-HP Health Data Warehouse (Entrepôt de Données de Santé)."
+authors = [
+    { name = "Data Engineering - I&D - DSN APHP", email = "dsn-id-data-engineering@aphp.fr" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocs-git-revision-date-localized-plugin",
+    "mkdocs-literate-nav",
+    "mkdocs-glightbox",
+    "mkdocs-minify-plugin",
+    "mike"
+
+]

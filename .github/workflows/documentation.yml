@@ -1,0 +1,30 @@
+name: documentation
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+  PYTHONPATH: "./"
+
+jobs:
+  deploy-doc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Configure Git Credentials
+        run: |
+          git config user.name ${{ github.actor }}
+          git config user.email ${{ github.actor }}@users.noreply.github.com
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.11.x
+      - run: pip install --upgrade --force-reinstall -e ".[docs]"
+      - run: mkdocs gh-deploy --force
