@@ -1,7 +1,6 @@
 ---
 hide:
     - navigation
-    - toc
 ---
 
 # Documentation de la base centrale de l'EDS
